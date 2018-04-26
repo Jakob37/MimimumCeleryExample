@@ -1,0 +1,5 @@
+*.rdb
+activate
+venv
+*.swp
+__pycache__/
