@@ -35,6 +35,10 @@ app.step_delay.delay(30, 5)
 
 Using the inspect control. Stack Overflow: https://stackoverflow.com/questions/5544629/retrieve-list-of-tasks-in-a-queue-in-celery
 
+Note! This only gives information about tasks that are claimed by Celery, not everything in queue.
+
+Also, speed up by `inspect('celery@mysite')` rather than the complete thing.
+
 ```
 > from app import celery
 > i = celery.control.inspect()
