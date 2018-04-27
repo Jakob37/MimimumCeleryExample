@@ -67,4 +67,19 @@ Digging into the queue.
  'worker_pid': None}
 ```
 
+# Example of getting REDIS-queue count
+
+Command-line:
+
+```
+redis-cli -h localhost -p 6379 -n 0 llen celery
+```
+
+Programmatically:
+
+```
+import redis
+red = redis.Redis(host='localhost', port=6379, db=0)
+red.llen('celery')
+```
 
